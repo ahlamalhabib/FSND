@@ -1,5 +1,5 @@
 
-#Trivia API Project : 
+# Trivia API Project : 
 
 Udacity is invested in creating bonding experiences for its employees and students. A bunch of team members got the idea to hold trivia on a regular basis and created a  webpage to manage the trivia app and play the game, but their API experience is limited and still needs to be built out. 
 
@@ -12,23 +12,23 @@ That's where you come in! Help them finish the trivia app so they can start hold
 5) Play the quiz game, randomizing either all questions or within a specific category.
 
 
-##Getting started :
+## Getting started :
 
 pre-requisites and local Development 
 Developers using this project should already have python3, pip and node installed on thier local machines .
 
-##Backend 
+## Backend 
 From the backend folder run 
 ```bash
 pip install -r requirements.txt
 ```
-###Database Setup
+### Database Setup
 With Postgres running, restore a database using the trivia.psql file provided. From the backend folder in terminal run:
 
 ```
 psql trivia < trivia.psql
 ```
-###Running the server
+### Running the server
 To run application run the following command :
 
 ```bash
@@ -40,7 +40,7 @@ Setting the `FLASK_ENV` variable to `development` will detect file changes and r
 
 Setting the `FLASK_APP` variable to `flaskr` directs flask to use the `flaskr` directory and the `__init__.py` file to find the application. 
 
-###Test
+### Test
 To run the tests, run
 ```
 dropdb trivia_test
@@ -49,7 +49,7 @@ psql trivia_test < trivia.psql
 python test_flaskr.py
 ```
 
-##Frontend 
+## Frontend 
 
 From Frontend folder run the following command :
 
@@ -59,9 +59,9 @@ npm install
 By defulat, the frond end will run on localhost:3000
 
 
-##API Reference
+## API Reference
 
-###Getting started 
+### Getting started 
 
 Base URL : at present that this app can only be run localy and is not hosted as base URL. 
 - Backend app is hosted at: [http://127.0.0.1:5000/]
@@ -70,7 +70,7 @@ Base URL : at present that this app can only be run localy and is not hosted as 
 
 
 
-###Error Handling 
+### Error Handling 
 
 Errors are returned in the following json format:
 ```
@@ -87,9 +87,9 @@ The API will return Three type of error when requesting fails :
 
 
 
-###Endpoint
+### Endpoint
 
-####GET /categories
+#### GET /categories
 - General:
 Returns all the categories.
 
@@ -126,7 +126,7 @@ Returns all the categories.
 }
 ```
 
-####GET /questions
+#### GET /questions
 - General:
 Returns all questions
 questions are in a paginated.
@@ -245,7 +245,7 @@ curl  -X POST -H "Content-Type: application/json" -d '{ "question": "Which is th
 }
 ```
 
-####POST /questions/search
+#### POST /questions/search
 - General:
 returns questions that has the search substring
 - Sample:
@@ -265,7 +265,7 @@ curl  -X POST -H "Content-Type: application/json" -d '{"searchTerm": "The Taj Ma
   "total_questions": 20
 }
 ```
-####GET /categories/int:id\/questions
+#### GET /categories/int:id\/questions
 - General:
 Gets questions by category using the id from the url parameter.
 - Sample:
@@ -293,7 +293,7 @@ curl http://127.0.0.1:5000/categories/3/questions
   "total_questions": 2
 }
 ```
-####POST /quizzes
+#### POST /quizzes
 - General
 Takes the category and previous questions in the request.
 Return random question not in previous questions.
